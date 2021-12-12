@@ -36,3 +36,74 @@ window.onscroll = () => {
         }    
     })
 }
+
+
+
+
+
+
+
+
+
+// CAROUSEL GALLERY //////////////////////
+
+
+const imgs = document.getElementById('imgs') //gallery container
+
+const leftBtn = document.getElementById('left')
+const rightBtn = document.getElementById('right')
+
+
+const img = document.querySelectorAll('#imgs .gallery-item')
+
+
+const mediaQuery = window.matchMedia('(max-width: 544px)')
+
+
+
+
+
+if (mediaQuery.matches) {
+    let idx = 0
+
+    let interval = setInterval(run, 2000);
+
+    function run(){
+    idx++
+    changeImage()
+    }   
+
+
+    function changeImage(){
+
+        if(idx > img.length -1){
+            idx = 0
+        }else if(idx<0){
+            idx = img.length -1
+        }
+    
+        imgs.style.transform = `translateX(${-idx * 300}px)`
+    }
+
+  }else{
+    // imgs.style.transform = `translateX(${-idx * 0}px)`
+  }
+  
+
+// function changeImage(){
+
+//     if(idx > img.length -1){
+//         idx = 0
+//     }else if(idx<0){
+//         idx = img.length -1
+//     }
+
+//     imgs.style.transform = `translateX(${-idx * 300}px)`
+// }
+
+const toggle = document.getElementById('toggle');
+const nav = document.getElementById('nav');
+
+toggle.addEventListener('click', function(){
+    nav.classList.toggle('navactive')
+})

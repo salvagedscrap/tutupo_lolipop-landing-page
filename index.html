@@ -21,16 +21,36 @@
             <div class="logo">
                 <img src="./image/logo.png" alt="" class="logo">    
             </div>
-        <nav class="nav header-nav">
+        <nav class="nav header-nav" id="nav">
             <ul class="ul ">
                 <li class="nav-item " ><a href="#home" class="navitemlink hoveractive ">HOME</a> </li>
                 <li class="nav-item" > <a href="#gallery" class="navitemlink " >GALLERY</a> </li>
                 <li class="nav-item"><a href="#about" class="navitemlink ">ABOUT</a> </li>
                 <!-- <li class="nav-item" id="home">CONTACT</li> -->
-                <li class="nav-item" >whatsapp</li>
-                <li class="nav-item" >instagram</li>
+                <li class="nav-item nav-icon" >
+                    <div class="nav-icon-group">
+                        <a href="">
+                            <img src="./image/ikonlar/whapsapp.png" alt="whatsapp">
+                        </a>
+                        <a href="">
+                            <img src="./image/ikonlar/mail.png" alt="mail">
+                        </a>
+                        <a href="">
+                            <img src="./image/ikonlar/instagram.png" alt="instagram">
+                        </a>
+
+                    </div>
+                </li>
+                
+                
+                    
             </ul>
+            
         </nav>
+        <button class="nav-hamburger" id="toggle">
+            <div class="line line-1"></div>
+            <div class="line line-2"></div>
+        </button>
     </div>
         <h1 class="heading-1">Tutupo Lolipop lorem lorem</h1>
         <h2 class="heading-2">Lorem ipsum dolor sit amet consectetur adipisicing.</h2>
@@ -44,30 +64,32 @@
             <h2 class="heading-2">Galeri?</h2>
             <p class="gallery-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, eligendi architecto!</p>
 
+            <div class="carousel">
 
-            <div class="gallery-container">
+            
+            <div class="gallery-container image-container " id="imgs">
 
          
             <figure class="gallery-item   gallery-item-1">
-                <img src="./image/1.jpg" alt="Gallery Photo">
+                <img class="gallery-item-img" src="./image/1.jpg" alt="Gallery Photo">
                 <figcaption class="gallery-item-caption">
                    <p>Lorem, ipsum dolor.</p> 
                 </figcaption>
             </figure>
             <figure class="gallery-item gallery-item-2">
-                <img src="./image/2.jpg" alt="Gallery Photo">
+                <img class="gallery-item-img" src="./image/2.jpg" alt="Gallery Photo">
                 <figcaption class="gallery-item-caption">
                     <p>Lorem, ipsum dolor.</p>
                 </figcaption>
             </figure>
             <figure class=" gallery-item gallery-item-3">
-                <img src="./image/3.jpg" alt="Gallery Photo">
+                <img class="gallery-item-img" src="./image/3.jpg" alt="Gallery Photo">
                 <figcaption class="gallery-item-caption">
                     <p>Lorem, ipsum dolor.</p>
                 </figcaption>
             </figure>
             <figure class=" gallery-item gallery-item-4">
-                <img src="./image/4.jpg" alt="Gallery Photo">
+                <img class="gallery-item-img" src="./image/4.jpg" alt="Gallery Photo">
                 <figcaption class="gallery-item-caption">
                     <p>Lorem, ipsum dolor.</p>
                 </figcaption>
@@ -102,7 +124,12 @@
                     <p>Lorem, ipsum dolor.</p>
                 </figcaption>
             </figure>       
-        </div>     
+        </div>  
+        <div class="buttons-container">
+            <button id="left"> left</button>
+            <button id="right">right</button>
+        </div>   
+    </div>
         </section>
 
         <section id="about"  class="about section">
