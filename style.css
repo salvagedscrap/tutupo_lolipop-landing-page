@@ -11,17 +11,17 @@ html {
 }
 
 body {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: mfont;
 }
 
 h1, h2, h3 {
-  font-family: 'Overpass', sans-serif;
+  font-family: mfont;
 }
 
 p {
   font-size: 1.8rem;
   font-weight: 300;
-  letter-spacing: .7px;
+  letter-spacing: 1px;
   line-height: 1.2;
 }
 
@@ -76,16 +76,16 @@ p {
   position: fixed;
   top: 0rem;
   right: 0rem;
-  background-color: #89aed1;
+  background-color: #9a6daf;
   width: 100%;
   padding-right: 3rem;
   -webkit-transition: all .1s ease-in-out;
   transition: all .1s ease-in-out;
-  padding: 3rem 2rem;
+  padding: 2.5rem 2rem;
 }
 
 .ul.active {
-  background-color: #9a6daf;
+  background-color: rgba(154, 109, 175, 0.774);
   padding: 2rem 2rem;
 }
 
@@ -95,7 +95,7 @@ p {
 }
 
 .navitemlink.hoveractive {
-  color: #222;
+  color: #000;
 }
 
 .nav ul {
@@ -108,6 +108,21 @@ p {
 
 .nav-item {
   font-size: 2.4rem;
+}
+
+.nav-item:not(:last-of-type) a:after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px #222;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.nav-item a:hover::after {
+  -webkit-transform: scaleX(0.8);
+          transform: scaleX(0.8);
 }
 
 .nav-icon-group {
@@ -339,8 +354,9 @@ p {
 }
 
 .about-header p {
-  margin: 10rem 0;
+  margin: 10rem auto;
   text-align: center;
+  width: 80%;
 }
 
 .heading-2 {
@@ -360,29 +376,38 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .about-subsection-text p {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
+}
+
+.about-subsection-text ul {
+  list-style: none;
+}
+
+.about-subsection-text ul li {
+  font-size: 1.6rem;
+  padding: .5rem 2rem;
 }
 
 .about-subsection-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
 }
 
 .about-subsection-2 {
-  gap: 4rem;
+  gap: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
 .about-subsection-3 {
-  gap: 4rem;
+  gap: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -430,6 +455,21 @@ p {
 .footer nav .nav-item a {
   text-decoration: none;
   color: #fff;
+}
+
+.footer nav .nav-item a:after {
+  display: block;
+  content: '';
+  border-bottom: solid 3px #222;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.footer nav .nav-item a:hover::after {
+  -webkit-transform: scaleX(0.8);
+          transform: scaleX(0.8);
 }
 
 .buttons-container {
@@ -501,6 +541,16 @@ p {
 @media (max-width: 41em) {
   html {
     font-size: 49%;
+  }
+  .subsection-list {
+    list-style: none;
+  }
+  .subsection-list-item {
+    font-size: 1.8rem;
+  }
+  .about-text {
+    width: 80%;
+    margin: auto;
   }
   .about {
     width: 90%;
