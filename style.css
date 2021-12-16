@@ -388,7 +388,7 @@ p {
 }
 
 .about-subsection-text ul li {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   padding: .5rem 2rem;
 }
 
@@ -517,7 +517,7 @@ p {
   }
   .about {
     width: 90%;
-    margin: 0 auto;
+    margin: 20rem auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -541,6 +541,17 @@ p {
 @media (max-width: 41em) {
   html {
     font-size: 49%;
+  }
+  .about-header {
+    padding-top: 5rem;
+  }
+  .about-header h2 {
+    margin-top: 2rem;
+  }
+  .about-header p {
+    margin: 4rem auto;
+    text-align: center;
+    width: 80%;
   }
   .subsection-list {
     list-style: none;
@@ -622,9 +633,10 @@ p {
     position: absolute;
     top: 5rem;
     right: 1rem;
-    left: 1rem;
+    left: 0rem;
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
+    padding-top: 2rem;
   }
   .banner {
     position: relative;
@@ -646,12 +658,25 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 2rem;
   }
   nav.navactive ul .nav-item {
     height: 2rem;
     width: 90%;
     z-index: 100000000;
     color: #222;
+  }
+  nav.navactive ul .nav-item:first-of-type {
+    margin-top: 5rem;
+  }
+  .nav-icon-group {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3rem;
   }
   .gallery {
     padding: 2rem 0;
@@ -742,10 +767,11 @@ p {
     background-color: rebeccapurple;
     color: #fff;
     border: none;
-    padding: 3rem;
+    padding: 0;
     cursor: pointer;
     display: block;
     width: 49.5%;
+    height: 5rem;
   }
   .buttons-container button:hover {
     opacity: .9;

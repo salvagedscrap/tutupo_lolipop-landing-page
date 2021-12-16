@@ -84,6 +84,14 @@ if (mediaQuery.matches) {
     
         imgs.style.transform = `translateX(${-idx * 300}px)`
     }
+    rightBtn.addEventListener('click', () =>{
+        idx++
+        changeImage()
+    })
+    leftBtn.addEventListener('click', () =>{
+        idx--
+        changeImage()
+    })
 
   }else{
     // imgs.style.transform = `translateX(${-idx * 0}px)`
