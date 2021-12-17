@@ -16,6 +16,7 @@ html{
 
 body{
     font-family: mfont;
+    overflow-x: hidden;
 
 
 
@@ -41,14 +42,20 @@ p{
     text-align: center;
     position: relative;
     &>*{
-    margin-bottom:5rem;
+    margin-bottom:2rem;
     }
-    background-image: linear-gradient( to bottom, rgba(239, 169, 71, 0.733) , rgba(239, 169, 71, 0.897) ), url(./image/5.jpg);
+    background-image: linear-gradient( to bottom, rgba(239, 169, 71, 0.733) , rgba(239, 169, 71, 0.897) ), url(./image/5.png);
     background-repeat: no-repeat, no-repeat;
     background-position: center, 0 10%;
     background-size: cover, 100%;
     padding-bottom: 10rem;
     color: #493852;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
 
 }
 .banner{
@@ -64,13 +71,16 @@ p{
 }
 .logo{
     font-size: 3rem;
-    width: 20rem;
+    width: 8rem;
     border-radius: 50%;
     display: block;
+    margin-right: auto;
+    margin-left: 5rem;
+
 
 }
 .header-nav{
-
+        
     .ul{
         align-items: center;
         justify-content: flex-end;
@@ -90,8 +100,8 @@ p{
 
 .ul.active{
     background-color: rgba(154, 109, 175, 0.774);
-
-    padding: 2rem 2rem;
+    
+    padding: 1rem 2rem;
 }
 .navitemlink{
     color: #fff;
@@ -161,143 +171,6 @@ p{
     padding: 2rem 4rem;
     border-radius: 50px;
 }
-
-
-
-
-
-
-
-
-
-// GALLERY/////////////////////////////////
-.gallery{
-
-
-    text-align: center;
-    margin: 0 auto;
-    background-image: linear-gradient( to bottom, #89aed1, #efa947 ) ;
-    padding: 10rem;
-    &-p{
-        margin: 10rem auto;
-    }
-}
-.gallery-container{
-    margin: 0 auto;
-    max-width: 120rem;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(3, 30vw);
-    gap: 2rem;
-    padding: 2rem;
-}
-.header-2{
-    // font-size: 4.2rem;
-    p{
-        margin: 10rem auto;
-    }
-}
-
-.gallery-item{
-    overflow: hidden;
-    position: relative;
-    transition: all .4s ease;
-    z-index: 1;
-
-    &-caption{
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, 20%);
-        color:white;
-        text-transform: uppercase;
-        text-align:center;
-        opacity: 0;
-        transition: all .3s ease;
-        z-index:1;
-        backface-visibility:hidden;
-        transition: all .4s ease;
-
-    }
-
-    img{
-        width: 100%;
-        height: 100%;
-        display: block;
-        object-fit: cover;
-        backface-visibility:hidden;
-        transition: all .4s ease;
-        z-index: 0;
-
-
-    }
-    &:hover img{
-        filter:blur(2px) brightness(60%);
-        transform: scale(1.2);
-
-    }
-    &:hover &-caption{
-
-        transform: scale(1.2);
-        transform:translate(-50%,-50%);
-        opacity: 1;
-
-}
-
-
-}
-.gallery-item-1{
-grid-row: 1/2 ;
-grid-column:1/2 ;
-
-}
-.gallery-item-2{
-grid-row:1/2 ;
-grid-column:2/3 ;
-}
-.gallery-item-3{
-grid-row:1/2 ;
-grid-column:3/4 ;
-}
-.gallery-item-4{
-grid-row: 2/3 ;
-grid-column: 1/2 ;
-}
-.gallery-item-5{
-grid-row: 2/3 ;
-grid-column: 2/3 ;
-}
-.gallery-item-6{
-grid-row:2/3 ;
-grid-column:3/4 ;
-}
-.gallery-item-7{
-grid-row: 3/4 ;
-grid-column:1/2 ;
-}
-.gallery-item-8{
-grid-row:3/4 ;
-grid-column:2/3 ;
-}
-.gallery-item-9{
-grid-row:3/4 ;
-grid-column:3/4 ;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 //ABOUT/////////////////////////////////////////
@@ -417,6 +290,14 @@ grid-column:3/4 ;
 
 .buttons-container{
     display: none;
+}
+.logo-hero{
+    display: none;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 5rem;
+    left: 2rem;
 }
 
 @media (max-width: 68.75em){
@@ -578,7 +459,9 @@ grid-column:3/4 ;
         font-weight: 200;
     }
        .logo{
-
+        position: absolute;
+        top: -2.5rem;
+        left: 2rem;
         margin-left: 2rem;
         border-radius: 50%;
         display: block;
@@ -587,7 +470,7 @@ grid-column:3/4 ;
     .header-nav{
         transform: translateX(150%);
         position: absolute;
-        top: 5rem;
+        top: 1rem;
         right: 1rem;
         left: 0rem;
         transition: all .5s ease;
@@ -595,6 +478,14 @@ grid-column:3/4 ;
         // .navitemlink{
         //     display: none;
         // }
+    }
+    .logo-hero{
+        display: block;
+        width: 5rem;
+        height: 5rem;
+        position: absolute;
+        top: 5rem;
+        left: 2rem;
     }
     .banner{
         position: relative;
@@ -647,7 +538,7 @@ grid-column:3/4 ;
         position: absolute;
         height: 30px;
         width: 30px;
-        top: 10rem;
+        top: 1rem;
         right: 5rem;
         background-color: transparent;
         z-index: 100000000;
@@ -740,3 +631,79 @@ grid-column:3/4 ;
 
 
 
+/* Slideshow container */
+.slideshow-container {
+    max-width: 400px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+    img{
+        width: 100%;
+    }
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    background-color: rgba(119, 119, 119, 0.5);
+    font-size: 15px;
+    padding: 1rem 2rem;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }

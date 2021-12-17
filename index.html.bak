@@ -18,15 +18,12 @@
 <body>
     <header id="home" class="header section">
         <div class="banner">
-            <div class="logo-hero">
+
+            <div class="logo">
                 <img src="./image/logo.png" alt="" class="logo">    
             </div>
-            
         <nav class="nav header-nav" id="nav">
             <ul class="ul ">
-                <li class="logo">
-                    <img src="./image/logo.png" alt="" class="logo">    
-                </li>
                 <li class="nav-item " ><a href="#home" class="navitemlink hoveractive ">Anasayfa</a> </li>
                 <li class="nav-item" > <a href="#gallery" class="navitemlink " >Çalışmalar</a> </li>
                 <li class="nav-item"><a href="#about" class="navitemlink ">Biz Kimiz</a> </li>
@@ -65,13 +62,13 @@
     <main>
         <section class="gallery section" id="gallery">
 
-            <h2 class="heading-2" style="margin:2rem">Çalışmalar</h2>
+            <h2 class="heading-2" style="margin:5rem">Çalışmalar</h2>
             <!-- <p class="gallery-p">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, eligendi architecto!</p> -->
 
 <div class="slideshow-container">
   <div class="mySlides fade">
     <div class="numbertext">1 / 9</div>
-    <img src="./image/1.png" alt="Gallery Photo" style="width:100%">
+    <<img src="./image/1.png" alt="Gallery Photo" style="width:100%">
     <div class="text">Caption One</div>
   </div>
   <div class="mySlides fade">
